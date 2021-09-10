@@ -4,3 +4,4 @@ Helps to visualize the technical analysis of stock data
 2) Calculates the RSI, MACD, Bollinger Bands
 3) Calculates Sell Buy Signal
 4) Analysis based on DMA
+5) Calculates some statistical measures
