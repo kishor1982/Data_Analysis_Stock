@@ -8,12 +8,29 @@ from matplotlib.font_manager import FontProperties
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 from matplotlib.font_manager import FontProperties
 from matplotlib import gridspec
+import json
+from urllib.parse import quote
+import requests
+from pandas.io.json import json_normalize
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 #import seaborn as sns
 #sns.set(style='darkgrid', context='talk', palette='Dark2')
 import sys
 if not sys.warnoptions:
     import warnings
     warnings.simplefilter("ignore")
+   
+# function to read data through API and reurn as dataframe
+def json_data(url):
+    response = urlopen(url)
+    elevations = response.read()
+    data = json.loads(elevations)
+    # to dataframe
+    df = pd.json_normalize(data['results'])
+    return df
     
 # Calculates simple interest
 def sint(principle, rate, time):
