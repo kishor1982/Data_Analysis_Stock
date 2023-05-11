@@ -5,3 +5,5 @@ Helps to visualize the technical analysis of stock data
 3) Calculates Sell Buy Signal
 4) Analysis based on DMA
 5) Calculates some statistical measures
+6) Option trading Strategies
+7) Pair trading - calculating correlation between price data
