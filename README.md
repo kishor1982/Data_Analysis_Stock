@@ -7,3 +7,4 @@ Helps to visualize the technical analysis of stock data
 5) Calculates some statistical measures
 6) Option trading Strategies
 7) Pair trading - calculating correlation between price data
+8) Calculate variance
